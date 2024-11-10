@@ -1,12 +1,13 @@
-
-
-
-
-
-function Button({cor, texto, handle}) {
+const Button = ({ color, text, handleClick }) => {
   return (
-    <button className={`btn btn-${cor} w-full`}>{texto}</button>
-  )
-}
+    <button
+      style={{ width: '100%' }}
+      className={`btn btn-${color}`} // Use template literals for string interpolation
+      onClick={handleClick} // Directly reference the handleClick function
+    >
+      {text}
+    </button>
+  );
+};
 
 export default Button;
