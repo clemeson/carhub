@@ -3,8 +3,9 @@ import toast from 'react-hot-toast';
 import api from './api'; // Importa a instância do axios
 
 export const Fetch = (endpoint, JSON, setDataResponse) => {
+  console.log(JSON);
   toast.promise(
-    api.get('/endpoint'), // Substitua pelo endpoint desejado
+    api.post(endpoint), // Substitua pelo endpoint desejado
     {
       loading: 'Carregando...',
       success: (response) => {
