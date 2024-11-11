@@ -1,7 +1,12 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
-import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import {
+  createBrowserRouter,
+  Outlet,
+  RouterProvider,
+  useLocation,
+} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Header from './components/Header';
@@ -13,15 +18,39 @@ import Login from './pages/auth/Login';
 import SignUp from './pages/auth/SignUp';
 import AboutUs from './pages/AboutUs';
 import Questions from './pages/Questions';
+import LoadingSpinner from './components/LoadingSpiner';
 
 AOS.init();
 
-const Layout = () => (
-  <>
-    <Header />
-    <Outlet></Outlet>
-  </>
-);
+const Layout = () => {
+  const location = useLocation();
+  const [isLoading, setIsLoading] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsLoading(true); // Ativa o loading no início da navegação
+
+    const timer = setTimeout(() => setIsLoading(false), 1000); // Desativa o loading após o atraso
+
+    return () => clearTimeout(timer); // Limpeza do timer ao desmontar
+  }, [location]);
+
+  return (
+    <>
+      {isLoading ? ( // Condicional para mostrar apenas o spinner quando isLoading for true
+        <div>
+          {' '}
+          <Header></Header>
+          <LoadingSpinner />
+        </div>
+      ) : (
+        <>
+          <Header />
+          <Outlet />
+        </>
+      )}
+    </>
+  );
+};
 
 const router = createBrowserRouter([
   {
@@ -50,14 +79,14 @@ const router = createBrowserRouter([
       },
       {
         path: '/aboutus',
-        element: <AboutUs></AboutUs>,
+        element: <AboutUs />,
       },
       {
         path: '/questions',
-        element: <Questions></Questions>,
+        element: <Questions />,
       },
       {
-        index: true, // Define '/' para renderizar Home como padrão
+        index: true,
         element: <Home />,
       },
     ],
@@ -66,7 +95,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Toaster position="top-center" /> {/* Inclui o Toaster aqui */}
+    <Toaster position="top-center" />
     <RouterProvider router={router} />
   </React.StrictMode>
 );

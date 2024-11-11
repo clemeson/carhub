@@ -1,11 +1,13 @@
 h1 {
-  font-size: 3.5em !important;
+  font-size: 2.8em !important;
 }
 
 @media (max-width: 575.98px) {
   h1 {
-    font-size: 2em !important;
+    font-size: 1.4em !important;
     margin-top: 0 !important;
+    font-weight: bold !important;
+    text-align: justify !important;
   }
 
   .section1 {
@@ -13,8 +15,11 @@ h1 {
   }
 
   h2 {
-    font-size: 1.3em !important;
-    padding: 10px;
+    font-size: 1.1em !important;
+  }
+
+  h4 {
+    text-align: justify !important;
   }
 }
 
