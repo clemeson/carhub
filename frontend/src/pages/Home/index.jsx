@@ -23,7 +23,7 @@ function Home() {
     <>
       <div className="bg-primary">
         <section
-          className="section1 d-flex flex-column calc-vh-100 container pt-5  "
+          className="section1 d-flex flex-column vh-100 container pt-5  "
           data-aos="fade-up"
           data-aos-duration="1500"
         >
@@ -68,12 +68,12 @@ function Home() {
 
       <div className="bg-white">
         <section
-          className="section2 d-flex flex-column calc-vh-100 container  align-itens-center justify-content-center"
+          className="section2 d-flex flex-column vh-100 container  align-itens-center justify-content-center"
           data-aos="fade-up"
           data-aos-duration="1500"
         >
           <div className="row">
-            <div className="mt-5  col-md-6 d-flex flex-column justify-content-center">
+            <div className="  col-md-6 d-flex flex-column justify-content-center order-md-last">
               {' '}
               <h1 className=" text-dark fw-bold my-4">Alugue de vizinhos!</h1>
               <p className="fs-4 my-4">
@@ -90,7 +90,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="d-flex justify-content-center mx-auto col-md-6">
+            <div className="d-flex justify-content-center mx-auto col-md-6 ">
               <img
                 className="w-100 pt-5"
                 src={car2}
@@ -102,16 +102,16 @@ function Home() {
         </section>
       </div>
 
-      <div className="bg-dark">
+      <div className="bg-dark d-flex align-items-center justify-content-center vh-100">
         <section
-          className="section3 d-flex flex-column calc-vh-100 container pt-5  "
+          className="section3 d-flex flex-column  container "
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          <div className="row">
+          <div className="row ">
             <div className="col-md-6 d-flex justify-content-center mx-auto order-md-1">
               <img
-                className="w-100 pt-5"
+                className="w-75 "
                 src={lowmoney}
                 alt="Carro 1"
                 data-aos="flip-left"
@@ -142,7 +142,7 @@ function Home() {
 
       <div className="bg-primary">
         <section
-          className="section4 d-flex flex-column calc-vh-100 container pt-5  "
+          className="section4 d-flex flex-column vh-100 container pt-5  "
           data-aos="fade-up"
           data-aos-duration="1500"
         >

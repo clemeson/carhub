@@ -14,7 +14,7 @@ function Header() {
       <nav className="navbar navbar-expand-lg  container">
         <div className="container-fluid justify-content-between d-flex d-flex">
           <a href="/">
-            <img src={logo}></img>
+            <img className="w-75" src={logo}></img>
           </a>
           <button
             className="navbar-toggler"
