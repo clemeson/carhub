@@ -4,6 +4,7 @@ import match from '../../assets/match.svg';
 import car1 from '../../assets/car1.svg';
 import { useNavigate } from 'react-router-dom'; // Add this import
 import Button from '../../components/Button';
+import Footer from '../../components/Footer';
 
 function Home() {
   const navigate = useNavigate(); // Add this hook
@@ -157,7 +158,7 @@ function Home() {
           </div>
           <div className="mt-3 pt-3 order-md-2">
             {' '}
-            <h1 className="text-center  text-white">
+            <h1 className="text-center  text-white fw-bold">
               A chave da liberdade está na palma da sua mão:
             </h1>
             <h3 className="text-white text-center ">
@@ -165,21 +166,18 @@ function Home() {
               Alugue fácil e rápido com apenas alguns cliques!
             </h3>
             <div className="d-flex gap-5 justify-content-center">
-              <Button
-                text={'Buscar um carro!'}
-                color={'warning'}
-                handleClick={handleButtonGetCars}
-              ></Button>
-
-              <Button
-                text={'Publicar um carro!'}
-                color={'warning'}
-                handleClick={handleButtonPublishCars}
-              ></Button>
+              <div className="w-50 align-items-start">
+                <Button
+                  text={'Encontrar um carro perfeito!'}
+                  color={'warning'}
+                  handleClick={handleButtonPublishCars}
+                ></Button>
+              </div>
             </div>
           </div>
         </section>
       </div>
+      <Footer></Footer>
     </>
   );
 }

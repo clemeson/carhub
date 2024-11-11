@@ -29,7 +29,7 @@ function Header() {
           </button>
 
           <div className="collapse navbar-collapse " id="navbarNav">
-            <ul className="navbar-nav gap-3 w-100 justify-content-end">
+            <ul className="navbar-nav gap-3 w-100 justify-content-end align-items-center">
               <li className="nav-item">
                 {' '}
                 <AnchorLink text="Dúvidas" to="/questions"></AnchorLink>
