@@ -1,32 +1,53 @@
-import constru from '../../assets/constructor.svg';
+import { useEffect, useState } from 'react';
 import Button from '../../components/Button';
+import { Fetch } from '../../service/Fetch';
+import ImageUpload from '../../components/UploadImage';
+import FormSignup from '../../components/Forms/FormSignup';
 import { useNavigate } from 'react-router-dom';
-// import { Container } from './styles';
+function PublishCar({ title, subTitle }) {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+      setScreenHeight(window.innerHeight);
+    };
 
-function PublishCar() {
-  const navigate = useNavigate();
-  const handleButton = (e) => {
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const [data, setData] = useState(null);
+
+  const handleClick = (e) => {
     e.preventDefault();
+    Fetch(setData);
+  };
 
-    navigate('/');
+  const handleImageSelect = (file) => {
+    if (file) {
+      // Aqui você pode:
+      // 1. Fazer upload direto para o servidor
+      // 2. Guardar o arquivo para enviar junto com o restante do formulário
+      console.log('Arquivo selecionado:', file);
+
+      // Exemplo de upload usando FormData
+      const formData = new FormData();
+      formData.append('image', file);
+
+      // fetch('/api/upload', {
+      //   method: 'POST',
+      //   body: formData
+      // });
+    }
+  };
+  const navigate = useNavigate();
+  const handleBtn = () => {
+    navigate('/publish-car/send');
   };
   return (
     <>
-      <div className="container d-flex flex-column justify-content-center w-100">
-        <img
-          style={{ maxWidth: '600px' }}
-          className="w-100 mx-auto"
-          src={constru}
-        ></img>
-        <h1 className="fw-bold mx-auto">Esta pagina está em construção...</h1>
-        <div className="w-50 mx-auto">
-          <Button
-            color={'primary'}
-            text={'Voltar para Home'}
-            handleClick={handleButton}
-          ></Button>
-        </div>
-      </div>
+      <FormSignup textButton={'Próximo'} handleButton={handleBtn}></FormSignup>
     </>
   );
 }

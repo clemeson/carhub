@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '../../Button';
 import { Fetch } from '../../../service/Fetch';
-function FormSignup({ title, subTitle }) {
+import InputComponent from '../../InputComponent';
+import ImageUpload from '../../UploadImage';
+function FormSignup({ title, subTitle, textButton, handleButton }) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [screenHeight, setScreenHeight] = useState(window.innerHeight);
   useEffect(() => {
@@ -20,6 +23,7 @@ function FormSignup({ title, subTitle }) {
     e.preventDefault();
     Fetch(setData);
   };
+
   return (
     <div className="d-flex justify-content-center ">
       <div
@@ -36,42 +40,52 @@ function FormSignup({ title, subTitle }) {
 
         <form>
           <div className="mb-3 input-group-lg">
-            <input
-              type="email"
-              className="form-control bg-light"
-              id="email"
-              placeholder="Insira seu email!"
-            />
+            <InputComponent
+              type={'text'}
+              placeholder={'Seu nome'}
+            ></InputComponent>
           </div>
           <div className="mb-3 input-group-lg">
-            <input
-              type="Nome"
-              className="form-control bg-light"
-              id="name"
-              placeholder="Insira seu nome completo!"
-            />
+            <InputComponent
+              type={'text'}
+              placeholder={'Seu nome'}
+            ></InputComponent>
           </div>
           <div className="mb-3 input-group-lg">
-            <input
-              type="password"
-              className="form-control bg-light"
-              id="password"
-              placeholder="Insira sua senha!"
-            />
+            <InputComponent
+              type={'text'}
+              placeholder={'Seu nome'}
+            ></InputComponent>
           </div>
           <div className="mb-3 input-group-lg">
-            <input
-              type="password"
-              className="form-control bg-light"
-              id="passwordRepeat"
-              placeholder="Repita sua senha"
-            />
+            <InputComponent
+              type={'text'}
+              placeholder={'Seu nome'}
+            ></InputComponent>
+          </div>
+          <div className="mb-3 input-group-lg">
+            <InputComponent
+              type={'text'}
+              placeholder={'Seu nome'}
+            ></InputComponent>
+          </div>
+          <div className="mb-3 input-group-lg">
+            <InputComponent
+              type={'text'}
+              placeholder={'Seu nome'}
+            ></InputComponent>
+          </div>
+          <div className="mb-3 input-group-lg">
+            <InputComponent
+              type={'text'}
+              placeholder={'Seu nome'}
+            ></InputComponent>
           </div>
           <div className=" d-flex justify-content-center d-flex justify-content-end">
             <Button
               color="primary"
-              text="Criar Conta"
-              handleClick={handleClick}
+              text={textButton}
+              handleClick={handleButton}
             >
               {' '}
             </Button>

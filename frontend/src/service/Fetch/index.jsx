@@ -14,7 +14,7 @@ export const Fetch = (endpoint, JSON, setDataResponse) => {
       },
       error: (error) => {
         const errorMessage =
-          error.response?.data?.message || 'Ocorreu um erro ao obter os dados!';
+          error.response?.data?.message || 'O backend ainda não está pronto!';
         return errorMessage;
       },
     }
