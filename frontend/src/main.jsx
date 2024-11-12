@@ -19,7 +19,8 @@ import SignUp from './pages/auth/SignUp';
 import AboutUs from './pages/AboutUs';
 import Questions from './pages/Questions';
 import LoadingSpinner from './components/LoadingSpiner';
-
+import { ProtectedRoute } from './components/ProtectedRoute';
+import SendImage from './pages/PublishCar/sendImage';
 AOS.init();
 
 const Layout = () => {
@@ -77,6 +78,11 @@ const router = createBrowserRouter([
         path: '/publish-car',
         element: <PublishCar />,
       },
+      {
+        path: '/publish-car/send',
+        element: <SendImage></SendImage>,
+      },
+
       {
         path: '/aboutus',
         element: <AboutUs />,
