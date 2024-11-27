@@ -15,9 +15,11 @@ export const showToast = (type, message) => {
       break;
     case 'success':
       toast.success(message || 'Ação realizada com sucesso!');
+
       break;
     case 'error':
       toast.error(message || 'Ocorreu um erro!');
+
       break;
     case 'warning':
       toast.warn(message || 'Atenção! Verifique as informações.');

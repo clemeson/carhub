@@ -5,7 +5,7 @@ import loginImg from '../../../assets/signup.svg';
 import FormSignup from '../../../components/Forms/FormSignup';
 function Login() {
   return (
-    <div className="calc-vh-100 d-flex justify-content-center align-items-center flex-column">
+    <div className=" d-flex justify-content-center align-items-center flex-column">
       <div className="w-100 d-flex justify-content-center">
         <img
           style={{

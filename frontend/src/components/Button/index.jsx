@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-const Button = ({ color, text, handleClick }) => {
+const Button = ({ color, text, handleClick, icon }) => {
   const [buttonSize, setButtonSize] = useState('btn-lg');
 
   useEffect(() => {
@@ -29,10 +29,11 @@ const Button = ({ color, text, handleClick }) => {
   return (
     <button
       style={{ width: '100%' }}
-      className={`btn btn-${color} text-button ${buttonSize} fw-semibold`}
+      className={`btn btn-${color} text-button ${buttonSize} fw-semibold d-flex gap-2 align-items-center justify-content-center`}
       onClick={handleClick}
     >
       {text}
+      {icon && <span className="d-flex align-items-center">{icon}</span>}
     </button>
   );
 };
