@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { IoMdLogIn } from 'react-icons/io';
 import Button from '../../Button';
 import { Fetch } from '../../../service/Fetch';
 import InputComponent from '../../InputComponent';
-import ImageUpload from '../../UploadImage';
+
 function FormSignup({ title, subTitle, textButton, handleButton }) {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+
   useEffect(() => {
     const handleResize = () => {
       setScreenWidth(window.innerWidth);
@@ -48,25 +48,25 @@ function FormSignup({ title, subTitle, textButton, handleButton }) {
           <div className="mb-3 input-group-lg">
             <InputComponent
               type={'text'}
-              placeholder={'Seu nome'}
+              placeholder={'Email'}
             ></InputComponent>
           </div>
           <div className="mb-3 input-group-lg">
             <InputComponent
-              type={'text'}
-              placeholder={'Seu nome'}
+              type={'password'}
+              placeholder={'Senha'}
             ></InputComponent>
           </div>
           <div className="mb-3 input-group-lg">
             <InputComponent
-              type={'text'}
-              placeholder={'Seu nome'}
+              type={'password'}
+              placeholder={'Repita a senha'}
             ></InputComponent>
           </div>
           <div className="mb-3 input-group-lg">
             <InputComponent
-              type={'text'}
-              placeholder={'Seu nome'}
+              type={'phone'}
+              placeholder={'Contato'}
             ></InputComponent>
           </div>
           <div className="mb-3 input-group-lg">
@@ -84,8 +84,9 @@ function FormSignup({ title, subTitle, textButton, handleButton }) {
           <div className=" d-flex justify-content-center d-flex justify-content-end">
             <Button
               color="primary"
-              text={textButton}
+              text="Criar Conta"
               handleClick={handleButton}
+              icon={<IoMdLogIn />}
             >
               {' '}
             </Button>
