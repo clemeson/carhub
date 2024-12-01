@@ -21,6 +21,7 @@ import Questions from './pages/Questions';
 import LoadingSpinner from './components/LoadingSpiner';
 import { ProtectedRoute } from './components/ProtectedRoute';
 import SendImage from './pages/PublishCar/sendImage';
+import Footer from './components/Footer';
 AOS.init();
 
 const Layout = () => {
@@ -47,6 +48,7 @@ const Layout = () => {
         <>
           <Header />
           <Outlet />
+          <Footer></Footer>
         </>
       )}
     </>

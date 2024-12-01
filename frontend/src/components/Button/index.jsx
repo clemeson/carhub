@@ -28,7 +28,7 @@ const Button = ({ color, text, handleClick, icon }) => {
 
   return (
     <button
-      style={{ width: '100%' }}
+      style={{ width: '100%', maxHeight: '60px' }}
       className={`btn btn-${color} text-button ${buttonSize} fw-semibold d-flex gap-2 align-items-center justify-content-center`}
       onClick={handleClick}
     >

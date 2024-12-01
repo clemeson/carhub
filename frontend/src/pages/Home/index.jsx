@@ -30,36 +30,41 @@ function Home() {
     <>
       <div className="bg-primary py-5">
         <section
-          className="container text-center vh-100"
+          className="container section1  text-center vh-100 vw-100  align-items-center  d-flex flex-column"
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          <img
-            className="img-fluid mb-4"
-            src={car1}
-            alt="Carro destaque"
-            style={{ maxWidth: '80%' }}
-          />
-          <h1 className="text-white fw-bold mb-3">
-            Liberdade para quem aluga e renda para quem compartilha!
-          </h1>
-          <p className="text-white fw-regular mb-4">
-            Precisa de um carro por um dia ou uma semana? Conectamos você ao
-            veículo certo!
-          </p>
-          <div className="d-flex gap-3 justify-content-center">
-            <Button
-              text="Buscar um carro!"
-              color="warning"
-              handleClick={handleButtonGetCars}
-              icon={<FaCarSide />}
+          <div className="row mx-auto h-75  w-100  d-flex justify-content-around ">
+            <img
+              className="mb-4 col-12 col-md-5 col-lg-6   mt-5"
+              src={car1}
+              alt="Carro destaque"
+              style={{ maxWidth: '80%' }}
             />
-            <Button
-              text="Publicar um carro!"
-              color="warning"
-              handleClick={handleButtonPublishCars}
-              icon={<FaCarOn />}
-            />
+            <div>
+              <h1 className="text-white fw-bold mb-3 col-12  ">
+                Liberdade para quem aluga e renda para quem compartilha!
+              </h1>
+              <h3 className="text-white  mb-4">
+                Precisa de um carro por um dia ou uma semana? Conectamos você ao
+                veículo certo!
+              </h3>
+            </div>
+
+            <div className="d-flex gap-3  justify-content-center col-12   col-lg-6">
+              <Button
+                text="Buscar um carro!"
+                color="warning"
+                handleClick={handleButtonGetCars}
+                icon={<FaCarSide />}
+              />
+              <Button
+                text="Publicar um carro!"
+                color="warning"
+                handleClick={handleButtonPublishCars}
+                icon={<FaCarOn />}
+              />
+            </div>
           </div>
         </section>
       </div>
@@ -154,10 +159,10 @@ function Home() {
           <h1 className="text-white fw-bold mb-3">
             A chave da liberdade está na palma da sua mão:
           </h1>
-          <p className="text-white fw-regular mb-4">
+          <h4 className="text-white fw-regular mb-4">
             Escolha o modelo, compare preços e tenha a liberdade que precisa.
             Alugue fácil e rápido com apenas alguns cliques!
-          </p>
+          </h4>
           <Button
             text="Encontrar um carro perfeito!"
             color="warning"
@@ -166,8 +171,6 @@ function Home() {
           />
         </section>
       </div>
-
-      <Footer />
     </>
   );
 }

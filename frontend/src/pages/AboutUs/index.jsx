@@ -1,31 +1,36 @@
-import constru from '../../assets/constructor.svg';
-import Button from '../../components/Button';
-import { useNavigate } from 'react-router-dom';
 // import { Container } from './styles';
+import clemeson from '../../assets/team/clemeson.png';
+import dan from '../../assets/team/dan.png';
+import vanilson from '../../assets/team/vanilson.png';
+import eduardo from '../../assets/team/eduardo.png';
 
 function AboutUs() {
-  const navigate = useNavigate();
-  const handleButton = (e) => {
-    e.preventDefault();
-
-    navigate('/');
-  };
   return (
     <>
-      <div className="container d-flex flex-column justify-content-center w-100">
-        <img
-          style={{ maxWidth: '600px' }}
-          className="w-100 mx-auto"
-          src={constru}
-        ></img>
-        <h1 className="fw-bold mx-auto">Esta pagina está em construção...</h1>
-        <div className="w-50 mx-auto">
-          <Button
-            color={'primary'}
-            text={'Voltar para Home'}
-            handleClick={handleButton}
-          ></Button>
-        </div>
+      <div className="container d-flex flex-column align-items-center vh-100 justify-content-center w-100">
+        <section className="container text-center d-flex align-items-center flex-column">
+          <h1 className="text-center fw-bold fs-1 fw-bolder  text-dark">
+            Paixão por Mobilidade e Inovação{' '}
+          </h1>
+          <h5>
+            Nosso time é movido pela paixão em transformar a forma como as
+            pessoas se locomovem
+          </h5>
+          <div className="d-flex align-items-center row">
+            <card className="col" data-aos="fade-up" data-aos-duration="1000">
+              <img src={eduardo} alt="img-time"></img>
+            </card>
+            <card className="col" data-aos="fade-up" data-aos-duration="1500">
+              <img src={clemeson} alt="img-time"></img>
+            </card>
+            <card className="col" data-aos="fade-up" data-aos-duration="2000">
+              <img src={dan} alt="img-time"></img>
+            </card>
+            <card className="col" data-aos="fade-up" data-aos-duration="2500">
+              <img src={vanilson} alt="img-time"></img>
+            </card>
+          </div>
+        </section>
       </div>
     </>
   );
