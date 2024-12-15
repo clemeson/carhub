@@ -1,4 +1,3 @@
-// import { Container } from './styles';
 import findCar from '../../assets/findcar.svg';
 import { useState } from 'react';
 import InputComponent from '../../components/InputComponent';
@@ -6,40 +5,39 @@ import Button from '../../components/Button';
 
 function SearchCars() {
   const [inputValue, setInputValue] = useState('');
+
   const handleSearchCarInput = (e) => {
     e.preventDefault();
-
     setInputValue(e.target.value);
   };
 
   return (
-    <>
-      <div className="container calc-vh-100 align-items-center d-flex flex-column pt-5">
-        <div className="w-50">
-          {' '}
+    <div className="container vh-100 d-flex flex-column justify-content-center align-items-center">
+      <div className="row w-100 justify-content-center">
+        <div className="col-12 col-md-6 mb-4 text-center">
           <img
-            className="w-100"
-            style={{ maxWidth: '450px' }}
+            className="img-fluid" // Ensures the image is responsive
             src={findCar}
             alt="Carro 1"
+            style={{ maxWidth: '450px' }}
             data-aos="flip-left"
           />
         </div>
 
-        <div className="w-75 mx-auto my-2">
+        <div className="col-12 col-md-8 mb-3">
           <InputComponent
             label={'Buscar...'}
             type={'text'}
-            placeholder={'Econtre o carro perfeito, perto de voce!'}
+            placeholder={'Encontre o carro perfeito, perto de você!'}
             handleChange={handleSearchCarInput}
-          ></InputComponent>
+          />
         </div>
 
-        <div className="w-75 my-2">
-          <Button color={'warning'} text={'Buscar'}></Button>
+        <div className="col-12 col-md-8">
+          <Button color={'warning'} text={'Buscar'} />
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

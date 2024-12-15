@@ -6,7 +6,7 @@ import { Fetch } from '../../../service/Fetch';
 function Login() {
   return (
     <div className="calc-vh-100 d-flex justify-content-center align-items-center flex-column">
-      <div className="w-100 d-flex justify-content-center">
+      <div className="w-100 d-flex justify-content-center d-none d-sm-flex">
         <img
           style={{
             maxWidth: '450px',

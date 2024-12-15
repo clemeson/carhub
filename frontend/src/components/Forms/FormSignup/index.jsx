@@ -35,50 +35,50 @@ function FormSignup({ title, subTitle, textButton, handleButton }) {
           maxHeight: '600px',
         }}
       >
-        <h2 className="text-center text-dark mb-0">{title}</h2>
+        <h2 className="text-center text-dark mb-0 fw-bold">{title}</h2>
         <p className="text-center text-dark ">{subTitle}</p>
 
         <form>
-          <div className="mb-3 input-group-lg">
+          <div className=" input-group-lg">
             <InputComponent
               type={'text'}
               placeholder={'Seu nome'}
             ></InputComponent>
           </div>
-          <div className="mb-3 input-group-lg">
+          <div className=" input-group-lg">
             <InputComponent
               type={'text'}
               placeholder={'Email'}
             ></InputComponent>
           </div>
-          <div className="mb-3 input-group-lg">
-            <InputComponent
-              type={'password'}
-              placeholder={'Senha'}
-            ></InputComponent>
-          </div>
-          <div className="mb-3 input-group-lg">
-            <InputComponent
-              type={'password'}
-              placeholder={'Repita a senha'}
-            ></InputComponent>
-          </div>
-          <div className="mb-3 input-group-lg">
+          <div className=" input-group-lg">
             <InputComponent
               type={'phone'}
               placeholder={'Contato'}
             ></InputComponent>
           </div>
-          <div className="mb-3 input-group-lg">
+          <div className=" input-group-lg">
             <InputComponent
-              type={'text'}
-              placeholder={'Seu nome'}
+              type={'password'}
+              placeholder={'Senha'}
             ></InputComponent>
           </div>
-          <div className="mb-3 input-group-lg">
+          <div className=" input-group-lg">
+            <InputComponent
+              type={'password'}
+              placeholder={'Repita a senha'}
+            ></InputComponent>
+          </div>
+          <div className=" input-group-lg">
             <InputComponent
               type={'text'}
-              placeholder={'Seu nome'}
+              placeholder={'Estado'}
+            ></InputComponent>
+          </div>
+          <div className=" input-group-lg">
+            <InputComponent
+              type={'text'}
+              placeholder={'Cidade'}
             ></InputComponent>
           </div>
           <div className=" d-flex justify-content-center d-flex justify-content-end">

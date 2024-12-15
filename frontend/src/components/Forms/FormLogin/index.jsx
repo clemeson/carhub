@@ -58,7 +58,7 @@ function FormLogin({ title, subTitle }) {
           maxHeight: '600px',
         }}
       >
-        <h2 className="text-center text-dark">{title}</h2>
+        <h2 className="text-center text-dark fw-bold">{title}</h2>
         <p className="text-center text-dark ">{subTitle}</p>
         <form>
           <InputComponent
