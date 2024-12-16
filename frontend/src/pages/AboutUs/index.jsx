@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 function AboutUs() {
   return (
     <>
-      <div className="container d-flex flex-column align-items-center vh-100 justify-content-center w-100">
-        <section className="container text-center d-flex align-items-center flex-column">
+      <div className="container d-flex flex-column align-items-center  justify-content-center w-100">
+        <section className="container text-center d-flex align-items-center   flex-column">
           <h1 className="text-center fw-bold fs-1 fw-bolder  text-dark">
             Paixão por Mobilidade e Inovação{' '}
           </h1>
@@ -58,7 +58,11 @@ function AboutUs() {
                 ></img>
               </Link>
             </card>
-            <card className="col" data-aos="fade-up" data-aos-duration="2500">
+            <card
+              className="col card-body"
+              data-aos="fade-up"
+              data-aos-duration="2500"
+            >
               <img src={vanilson} alt="img-time"></img>
               <Link
                 className="btn btn-primary"
