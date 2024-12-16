@@ -39,3 +39,37 @@ h1 {
 .calc-vh-100 {
   height: calc(100vh - 114px) !important;
 }
+
+/* Add this CSS to your stylesheet */
+/* Updated CSS for full-screen navbar */
+.navbar-collapse {
+  position: fixed; /* Keep it fixed to the viewport */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+  z-index: 1000; /* Ensure it appears above other content */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+  transform: translateY(-100%); /* Start off-screen */
+}
+
+.navbar-collapse.show {
+  transform: translateY(0); /* Slide into view when open */
+}
+
+.navbar-nav {
+  width: 100%; /* Make sure it fills the width */
+}
+
+.navbar-nav .nav-item {
+  margin-bottom: 20px; /* Space between items */
+}
+
+.navbar-toggler {
+  z-index: 1050; /* Ensure toggler is above the navbar */
+}
